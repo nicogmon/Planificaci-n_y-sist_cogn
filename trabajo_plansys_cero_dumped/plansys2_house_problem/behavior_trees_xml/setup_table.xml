@@ -1,0 +1,9 @@
+<root BTCPP_format="4" main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+       <Sequence name="root_sequence">
+            <PlaceCutlery name="place_cutlery"/>
+            <PlaceDishes name="place_dishes"/>
+            <PlaceGlasses name="place_glasses"/>
+       </Sequence>
+    </BehaviorTree>
+</root>

@@ -1,0 +1,10 @@
+<root BTCPP_format="4" main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+       <Sequence name="root_sequence">
+           <OpenDoor   name="open_door" />
+           <AskDestination    name="ask_destination" />
+           <Move    name="move" goal="{arg2}" />
+           <PresentPerson    name="present_person" />
+       </Sequence>
+    </BehaviorTree>
+</root>

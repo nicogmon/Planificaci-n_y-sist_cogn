@@ -1,0 +1,96 @@
+move:
+  ros__parameters:
+    plugins:
+      - move_node
+    waypoints: ["kitchen", "bedroom", "trashbin", "livingroom", "entrance", "gym", "bedroom_entrance1", "bedroom_entrance2", "bedroom_exit1", "bedroom_exit2"]
+    waypoint_coords:
+      kitchen: [8.0, -3.5, 0.0]
+      bedroom: [-4.3, 1.2, 0.0]
+      trashbin: [8.26, -2.0, 0.0]
+      livingroom: [5.1, 1.2, 0.0]
+      entrance: [6.0, -4.0, 0.0]
+      gym: [1.2, 4.4, 0.0]
+      bedroom_entrance1: [-1.7, -0.8, 0.0]
+      bedroom_entrance2: [-2.82, -0.94, 0.0]
+      bedroom_exit1: [-2.25, -2.25, 0.0]
+      bedroom_exit2: [-1.3, -2.0, 0.0]
+
+attend_person:
+  ros__parameters:
+    plugins:
+      - open_door_node
+      - ask_destination_node
+      - move_node
+      - present_person_node
+    waypoints: ["kitchen", "bedroom", "trashbin", "livingroom", "entrance", "gym", "bedroom_entrance1", "bedroom_entrance2", "bedroom_exit1", "bedroom_exit2"]
+    waypoint_coords:
+      kitchen: [8.0, -3.5, 0.0]
+      bedroom: [-4.3, 1.2, 0.0]
+      trashbin: [8.26, -2.0, 0.0]
+      livingroom: [5.1, 1.2, 0.0]
+      entrance: [6.0, -4.0, 0.0]
+      gym: [1.2, 4.4, 0.0]
+      bedroom_entrance1: [-1.7, -0.8, 0.0]
+      bedroom_entrance2: [-2.82, -0.94, 0.0]
+      bedroom_exit1: [-2.25, -2.25, 0.0]
+      bedroom_exit2: [-1.3, -2.0, 0.0]
+
+pass_door:
+  ros__parameters:
+    plugins:
+      - pass_door_node
+    waypoints: ["bedroom_entrance1", "bedroom_entrance2", "bedroom_exit1", "bedroom_exit2"]
+    waypoint_coords:
+      bedroom_entrance1: [-1.7, -0.8, 0.0]
+      bedroom_entrance2: [-2.82, -0.94, 0.0]
+      bedroom_exit1: [-2.25, -2.25, 0.0]
+      bedroom_exit2: [-1.3, -2.0, 0.0]
+
+pick_up_trash:
+  ros__parameters:
+    plugins:
+      - pick_trash_node
+      - move_node
+      - drop_trash_node
+    waypoints: ["kitchen", "bedroom", "trashbin", "livingroom", "entrance", "gym", "bedroom_entrance1", "bedroom_entrance2", "bedroom_exit1", "bedroom_exit2"]
+    waypoint_coords:
+      kitchen: [8.0, -3.5, 0.0]
+      bedroom: [-4.3, 1.2, 0.0]
+      trashbin: [8.26, -2.0, 0.0]
+      livingroom: [5.1, 1.2, 0.0]
+      entrance: [6.0, -4.0, 0.0]
+      gym: [1.2, 4.4, 0.0]
+      bedroom_entrance1: [-1.7, -0.8, 0.0]
+      bedroom_entrance2: [-2.82, -0.94, 0.0]
+      bedroom_exit1: [-2.25, -2.25, 0.0]
+      bedroom_exit2: [-1.3, -2.0, 0.0]
+
+ask_open_door:
+  ros__parameters:
+    plugins:
+      - ask_open_door_node
+
+dish_wash:
+  ros__parameters:
+    plugins:
+      - open_tap_node
+      - grab_sponge_node
+      - scrub_node
+      - rinse_node
+      - drop_sponge_node
+      - close_tap_node
+
+setup_table:
+  ros__parameters:
+    plugins:
+      - place_cutlery_node
+      - place_dishes_node
+      - place_glasses_node
+
+tie_bed:
+  ros__parameters:
+    plugins:
+      - stretch_sheet_node
+      - place_blanket_node
+      - pillow_placement_node
+

@@ -1,0 +1,10 @@
+<root BTCPP_format="4" main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+       <Sequence name="root_sequence">
+           <PickTrash    name="pick_trash"/>
+           <Move    name="move" goal="trashbin"/>
+           <DropTrash    name="drop_trash"/>
+           <Move    name="move" goal="{arg1}"/>
+       </Sequence>
+    </BehaviorTree>
+</root>

@@ -1,0 +1,12 @@
+<root BTCPP_format="4" main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+       <Sequence name="root_sequence">
+            <OpenTap   name="open_tap"/>
+            <GrabSponge   name="grab_sponge"/>
+            <Scrub        name="scrub"/>
+            <Rinse        name="rinse"/>
+            <DropSponge   name="drop_sponge"/>
+            <CloseTap  name="close_tap"/>
+       </Sequence>
+    </BehaviorTree>
+</root>

@@ -1,0 +1,23 @@
+set instance star deathstar
+set instance coruscant planet
+set instance endor planet
+set instance alderaan planet
+set instance dantooine planet
+set instance hoth planet
+set instance yavin4 planet
+
+set predicate (star_at star alderaan)
+
+set predicate (connected coruscant endor)
+set predicate (connected coruscant endor)
+set predicate (connected coruscant alderaan)
+set predicate (connected alderaan coruscant)
+set predicate (connected coruscant dantooine)
+set predicate (connected dantooine coruscant)
+set predicate (connected endor hoth)
+set predicate (connected hoth endor)
+set predicate (connected endor yavin4)
+set predicate (connected yavin4 endor)
+
+
+set goal (and (destroyed yavin4) (star_at star endor))

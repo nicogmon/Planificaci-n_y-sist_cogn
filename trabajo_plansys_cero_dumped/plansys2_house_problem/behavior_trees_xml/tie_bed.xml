@@ -1,0 +1,9 @@
+<root BTCPP_format="4" main_tree_to_execute = "MainTree" >
+    <BehaviorTree ID="MainTree">
+       <Sequence name="root_sequence">
+           <StretchSheet   name="stretch_sheet"/>
+           <PlaceBlanket     name="place_blanket"/>
+           <PillowPlacement  name="pillow_placement"/>
+       </Sequence>
+    </BehaviorTree>
+</root>

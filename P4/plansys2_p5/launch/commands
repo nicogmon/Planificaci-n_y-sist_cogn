@@ -1,0 +1,40 @@
+set instance walle robot
+set instance table location
+set instance floor location
+set instance fridge location
+set instance shelving location
+set instance big_container deposit
+set instance bottle item 
+set instance newspaper item
+set instance rotten_apple item
+set instance book item
+set instance banana item
+set instance wg1 gripper
+set instance wc1 container
+
+set predicate (robot_at walle big_container)
+set predicate (gripper_from walle wg1)
+set predicate (gripper_free walle wg1)
+set predicate (container_from walle wc1)
+set predicate (item_at bottle floor)
+set predicate (item_at newspaper table)
+set predicate (item_at rotten_apple fridge)
+set predicate (item_at book shelving)
+set predicate (item_at banana fridge)
+
+
+
+set function (= (container_max_capacity walle wc1) 8)
+set function (= (container_current_load walle wc1) 0)
+set function (= (weight bottle) 1)
+set function (= (weight newspaper) 1)
+set function (= (weight rotten_apple) 1)
+set function (= (weight book) 1)
+set function (= (weight banana) 1)
+
+set goal (and (item_at bottle big_container)(item_at rotten_apple big_container)(item_at newspaper big_container )(item_at book big_container)(item_at banana big_container))
+
+
+
+
+
